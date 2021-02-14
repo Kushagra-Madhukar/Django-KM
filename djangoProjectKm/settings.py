@@ -9,6 +9,9 @@ https://docs.djangoproject.com/en/3.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.1/ref/settings/
 """
+# Importing Messages ability(Alert) Manually------
+from django.contrib.messages import constants as messages
+# ------
 
 from pathlib import Path
 
@@ -26,11 +29,12 @@ SECRET_KEY = 'v5d$_0=fc2elbyu0s9z9x4-+r4_x0#nq=xa%&0&gkjvm)jv9*_'
 DEBUG = True
 
 ALLOWED_HOSTS = []
-
+# Allowed host mai production ke time host url dalna warna error
 
 # Application definition
 
 INSTALLED_APPS = [
+    'home.apps.HomeConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
